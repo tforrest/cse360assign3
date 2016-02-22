@@ -25,7 +25,7 @@ public class Calculator {
 	 * @return total 
 	 */
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	
 	/**
@@ -35,6 +35,8 @@ public class Calculator {
 	 */
 	public void add (int value) {
 		
+		total = total + value;
+		
 	}
 	/**
 	 * Subtracts an int value from total
@@ -43,20 +45,40 @@ public class Calculator {
 	 */
 	public void subtract (int value) {
 		
+		total = total - value;
+		
 	}
 	
-	/**
+	/**Multiple an int value from total
 	 * 
 	 * @param value
 	 */
 	public void multiply (int value) {
 		
-	}
-	
-	public void divide (int value) {
+		total = total * value;
 		
 	}
 	
+	/**
+	 * Divide total by an int value
+	 * 
+	 * @param value
+	 */
+	public void divide (int value) {
+		
+		if (value == 0) {
+			total = 0;
+		}
+		else {
+			total = total / value;
+		}
+		
+	}
+	/**
+	 * Return the history of the calculator 
+	 * 
+	 * @return string 
+	 */
 	public String getHistory () {
 		return "";
 	}
